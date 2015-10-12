@@ -48,7 +48,7 @@ hr { margin-top: 5px;margin-bottom: 10px; }
 @media (min-width: 768px) {
   .sidebar {
     position: fixed;
-    top: 51px;
+    top: 0;
     bottom: 0;
     left: 0;
     z-index: 1000;
@@ -56,8 +56,7 @@ hr { margin-top: 5px;margin-bottom: 10px; }
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
-    border-right: 1px solid #eee;
+	background-color: #333;
   }
 }
 
@@ -304,3 +303,160 @@ div.boxes-success {
     background-color: #555;
 }
 /********************************************************************/
+
+.stdpad {
+    width: 100%;
+    height: 300px;
+    font-size: 13px;
+    font-weight: 300;
+    background: #FFFFFF;
+}
+
+.stdpad-small {
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #FFFFFF;
+    border-radius: 3px;
+}
+
+.stdpad-small.red {
+    background: #ed5564;
+}
+
+.stdpad-small.orange {
+    background: #fb6e52;
+}
+
+.stdpad-small.green {
+    background: #48cfae;
+}
+
+.stdpad-small.blue {
+    background: #11A7DB;
+}
+
+.stdpad-small .icon {
+    float: left;
+    width: 30%;
+    height: 72%;
+    border-right: 2px solid rgba(255, 255, 255, .4);
+    padding: 0px 18px 0 0;
+    margin: 17px;
+    font-size: 74px;
+    text-align: center;
+}
+
+.stdpad-small .stats .number {
+    font-weight: 600;
+    font-size: 30px;
+    padding-top: 28px;
+}
+
+.stdpad-small .stats .text {
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: -4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stdpad-small .stats {
+    padding-right: 10px;
+}
+
+.stdpad-small .stats.two {
+    padding-top: 10px;
+}
+
+.stdpad-small .stats.two .number {
+    padding-top: 4px;
+    font-size: 19px;
+}
+
+.stdpad-small .stats.two .text {
+    font-size: 15px;
+}
+
+.stdpad h2 {
+    margin-bottom: 15px;
+    padding: 14px;
+    font-size: 11pt;
+    margin: 0;
+    border-bottom: 1px solid #EEE;
+    color: #000000;
+    font-weight: 400;
+}
+
+.stdpad .label {
+    border: 0px !important;
+}
+
+.stdpad ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 5%;
+}
+
+.stdpad-small .circular-bar canvas {
+    margin-top: 12px;
+}
+
+.topbar {
+    height: 64px;
+    line-height: 64px;
+    float: right;
+    font-size: 15px;
+}
+
+.topbar span {
+    height: 18px;
+    padding: 0 15px 0 0;
+    margin: -2px 0 0 15px;
+    border-right: 1px solid #e5e9ec;
+    font-weight: 300;
+}
+
+.topbar span:last-child {
+    border-right: 0;
+}
+
+.topbar span a {
+    color: #505458;
+    -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+.topbar span a:hover {
+    color: #00b3ff;
+}
+
+.table-head {
+    line-height: 46px;
+    height: 46px;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #337ab7;
+    /* text-transform:uppercase; */
+    /* border-bottom:1px solid #E5E9EC;*/
+}
+
+ul.notification {
+    margin-top: 10px;
+    height: 228px;
+    overflow: hidden;
+}
+
+ul.notification li {
+    border-bottom: 1px solid #EEE;
+    margin-bottom: 9px;
+    line-height: 21px;
+    padding: 5px 0;
+}
