@@ -11,8 +11,12 @@ body {
 
 .nav-tabs .glyphicon:not(.no-margin) {
     margin-right: 10px;
+
 }
 
+.row-header-margin {
+    margin-top: 20px;
+}
 .tab-pane .list-group-item:first-child {
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;

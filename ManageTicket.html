@@ -49,11 +49,14 @@
                 </div>
             </div>
         </div>  
-    <div class="row">
         
+
+    <div class="row">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
-            <!-- Nav tabs -->
+    <!-- Nav tabs -->
             <div class="stdpad">
+            <div class="table-head">All Tickets</div>
+            <div class="row row-header-margin"></div>
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#open" data-toggle="tab"><span class="glyphicon glyphicon-inbox">
                 </span>Open</a></li>
@@ -61,71 +64,91 @@
                     Awaiting Reply</a></li>
                 <li><a href="#inProgress" data-toggle="tab"><span class="glyphicon glyphicon-tags"></span>
                     In Progress</a></li>
-                    <li><a href="#solved" data-toggle="tab"><span class="glyphicon glyphicon-tags"></span>
+                    <li><a href="#solved" data-toggle="tab"><span class="glyphicon glyphicon-cloud"></span>
                     Solved</a></li>
                 <li><a href="#settings" data-toggle="tab"><span class="glyphicon glyphicon-plus no-margin">
                 </span></a></li>
 
             </ul>
             <!-- Tab panes -->
-            <div class="tab-content">
-                <div class="tab-pane fade in active" id="open">
-                    <div class="list-group">
-                        <a href="details.html" class="list-group-item">
-                            <div class="checkbox"><label><input type="checkbox"></label></div>
-                            <span class="glyphicon glyphicon-paperclip"></span>
-                            <span class="name" style="min-width: 120px; display: inline-block;">Jerrard Lee</span>
-                            <span class="">Database missing</span>
-                            <span class="text-muted" style="font-size: 11px;">-Table not found </span>
-                            <span class="pull-right"></span>
-                            <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-primary">Low</span></span>
-                            <span class="badge">12:10 AM</span> 
-                        </a>
-                        <a href="details.html" class="list-group-item">
-                            <div class="checkbox"><label><input type="checkbox"></label></div>
-                            <span class="glyphicon glyphicon-paperclip"></span>
-                            <span class="name" style="min-width: 120px; display: inline-block;">Christopher Maven</span>
-                            <span class="">Page not responding</span>
-                            <span class="text-muted" style="font-size: 11px;">-Tabs not working</span>
-                            <span class="pull-right"></span>
-                            <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-danger">High</span></span>
-                            <span class="badge">12:10 AM</span> 
-                        </a>
-                        <a href="details.html" class="list-group-item">
-                            <div class="checkbox"><label><input type="checkbox"></label></div>
-                            <span class="glyphicon glyphicon-paperclip"></span>
-                            <span class="name" style="min-width: 120px; display: inline-block;">Lila Swan</span>
-                            <span class="">Renew license</span>
-                            <span class="text-muted" style="font-size: 11px;">-Forgot id</span>
-                            <span class="pull-right"></span>
-                            <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-warning">Medium</span></span>
-                            <span class="badge">12:10 AM</span> 
-                        </a>
-                     </div>
-                </div>
-                <div class="tab-pane fade in" id="awaiting">
-                    <div class="list-group">
-                        <div class="list-group-item">
-                            <span class="text-center">This tab is empty.</span>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="open">
+                        <div class="list-group">
+                            <a href="details.html" class="list-group-item">
+                                <input type="checkbox"></label>
+                                <span class="glyphicon glyphicon-paperclip"></span>
+                                <span class="name" style="min-width: 120px; display: inline-block;">Jerrard Lee</span>
+                                <span class="">Database missing</span>
+                                <span class="text-muted" style="font-size: 11px;">-Table not found </span>
+                                <span class="pull-right"></span>
+                                <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-primary">Low</span></span>
+                                <span class="text-muted pull-right" style="font-size: 11px;">12:10 AM</span> 
+                            </a>
+                            <a href="details.html" class="list-group-item">
+                                <input type="checkbox"></label>
+                                <span class="glyphicon glyphicon-paperclip"></span>
+                                <span class="name" style="min-width: 120px; display: inline-block;">Christopher Maven</span>
+                                <span class="">Page not responding</span>
+                                <span class="text-muted" style="font-size: 11px;">-Tabs not working</span>
+                                <span class="pull-right"></span>
+                                <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-danger">High</span></span>
+                                <span class="text-muted pull-right" style="font-size: 11px;">10:10 AM</span> 
+                            </a>
+                            <a href="details.html" class="list-group-item">
+                                <input type="checkbox"></label>
+                                <span class="glyphicon glyphicon-paperclip"></span>
+                                <span class="name" style="min-width: 120px; display: inline-block;">Lila Swan</span>
+                                <span class="">Renew license</span>
+                                <span class="text-muted" style="font-size: 11px;">-Forgot id</span>
+                                <span class="pull-right"></span>
+                                <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-primary">Low</span></span>
+                                <span class="text-muted pull-right" style="font-size: 11px;">02:10 PM</span> 
+                            </a>
+                            <a href="details.html" class="list-group-item">
+                               <input type="checkbox"></label>
+                                <span class="glyphicon glyphicon-paperclip"></span>
+                                <span class="name" style="min-width: 120px; display: inline-block;">Greg Noak</span>
+                                <span class="">Undefined error</span>
+                                <span class="text-muted" style="font-size: 11px;">-pop up message showing error</span>
+                                <span class="pull-right"></span>
+                                <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-warning">Medium</span></span>
+                                <span class="text-muted pull-right" style="font-size: 11px;">05:10 PM</span> 
+                            </a>
+                            <a href="details.html" class="list-group-item">
+                                <input type="checkbox"/>
+                                <span class="glyphicon glyphicon-paperclip"></span>
+                                <span class="name" style="min-width: 120px; display: inline-block;">John Doe</span>
+                                <span class="">System crashed</span>
+                                <span class="text-muted" style="font-size: 11px;">-System stopped working when submit order.</span>
+                                <span class="pull-right"></span>
+                                <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-danger">High</span></span>
+                                <span class="text-muted pull-right" style="font-size: 11px;">12:10 AM</span> 
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="tab-pane fade in" id="inProgress">
+                    <div class="tab-pane fade in" id="awaiting">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <span class="text-center">This tab is empty.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="inProgress">
                     ...</div>
                     <div class="tab-pane fade in" id="solved">
-                    <div class="list-group">
-                    <a href="#" class="list-group-item">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox">
-                                </label>
-                            </div>
-                            <span class="glyphicon glyphicon-star-empty"></span><span class="name" style="min-width: 120px;
-                                display: inline-block;">Bhaumik Patel</span> <span class="">This is big title</span>
-                            <span class="text-muted" style="font-size: 11px;">- Hi hello how r u ?</span> <span
-                                class="badge">12:10 AM</span> <span class="pull-right"><span class="glyphicon glyphicon-paperclip">
-                                </span></span></a></div></div>
-                <div class="tab-pane fade in" id="settings">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">
+                            <input type="checkbox">
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <span class="name" style="min-width: 120px; display: inline-block;">Bhaumik Patel</span>
+                            <span class="">This is big title</span>
+                            <span class="text-muted" style="font-size: 11px;">- Hi hello how r u ?</span> 
+                            <span class="badge">12:10 AM</span>
+                            <span class="pull-right"><span class="glyphicon glyphicon-paperclip"></span></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="settings">
                     This tab is empty.</div>
             </div>
 
