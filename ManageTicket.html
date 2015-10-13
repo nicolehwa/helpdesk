@@ -55,7 +55,12 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
     <!-- Nav tabs -->
             <div class="stdpad">
-            <div class="table-head">All Tickets</div>
+            <div class="table-head">All Tickets
+               <div class="pull-right col-md-4" style="padding-top: 10px; padding-botton: 10px;">
+                      <input type="text" class="form-control input-sm" placeholder="Search ticket..."> 
+                </div>
+            </div>
+
             <div class="row row-header-margin"></div>
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#open" data-toggle="tab"><span class="glyphicon glyphicon-inbox">
@@ -73,57 +78,59 @@
             <!-- Tab panes -->
                 <div class="tab-content">
                     <div class="tab-pane fade in active" id="open">
-                        <div class="list-group">
-                            <a href="details.html" class="list-group-item">
-                                <input type="checkbox"></label>
-                                <span class="glyphicon glyphicon-paperclip"></span>
-                                <span class="name" style="min-width: 120px; display: inline-block;">Jerrard Lee</span>
-                                <span class="">Database missing</span>
-                                <span class="text-muted" style="font-size: 11px;">-Table not found </span>
-                                <span class="pull-right"></span>
-                                <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-primary">Low</span></span>
-                                <span class="text-muted pull-right" style="font-size: 11px;">12:10 AM</span> 
-                            </a>
-                            <a href="details.html" class="list-group-item">
-                                <input type="checkbox"></label>
-                                <span class="glyphicon glyphicon-paperclip"></span>
-                                <span class="name" style="min-width: 120px; display: inline-block;">Christopher Maven</span>
-                                <span class="">Page not responding</span>
-                                <span class="text-muted" style="font-size: 11px;">-Tabs not working</span>
-                                <span class="pull-right"></span>
-                                <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-danger">High</span></span>
-                                <span class="text-muted pull-right" style="font-size: 11px;">10:10 AM</span> 
-                            </a>
-                            <a href="details.html" class="list-group-item">
-                                <input type="checkbox"></label>
-                                <span class="glyphicon glyphicon-paperclip"></span>
-                                <span class="name" style="min-width: 120px; display: inline-block;">Lila Swan</span>
-                                <span class="">Renew license</span>
-                                <span class="text-muted" style="font-size: 11px;">-Forgot id</span>
-                                <span class="pull-right"></span>
-                                <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-primary">Low</span></span>
-                                <span class="text-muted pull-right" style="font-size: 11px;">02:10 PM</span> 
-                            </a>
-                            <a href="details.html" class="list-group-item">
-                               <input type="checkbox"></label>
-                                <span class="glyphicon glyphicon-paperclip"></span>
-                                <span class="name" style="min-width: 120px; display: inline-block;">Greg Noak</span>
-                                <span class="">Undefined error</span>
-                                <span class="text-muted" style="font-size: 11px;">-pop up message showing error</span>
-                                <span class="pull-right"></span>
-                                <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-warning">Medium</span></span>
-                                <span class="text-muted pull-right" style="font-size: 11px;">05:10 PM</span> 
-                            </a>
-                            <a href="details.html" class="list-group-item">
-                                <input type="checkbox"/>
-                                <span class="glyphicon glyphicon-paperclip"></span>
-                                <span class="name" style="min-width: 120px; display: inline-block;">John Doe</span>
-                                <span class="">System crashed</span>
-                                <span class="text-muted" style="font-size: 11px;">-System stopped working when submit order.</span>
-                                <span class="pull-right"></span>
-                                <span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-danger">High</span></span>
-                                <span class="text-muted pull-right" style="font-size: 11px;">12:10 AM</span> 
-                            </a>
+                        <div class="table-responsive">    
+                            <table class="table table-hover">
+                            <tr onclick="document.location = 'details.html';" style="cursor: pointer">
+                             <td><input type="checkbox"></label></td>
+                             <td><span class="glyphicon glyphicon-paperclip"></span></td>
+                             <td><span class="name" style="min-width: 120px; display: inline-block;">Jerrard Lee</span></td>
+                             <td>Database missing</td>
+                             <td><span class="text-muted" style="font-size: 11px;">-Table not found </span></td>
+                             <td><span class="pull-right"></span></td>
+                             <td><span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-primary">Low</span></span></td>
+                             <td><span class="text-muted pull-right" style="font-size: 11px;">12:10 AM</span></td>
+                            </tr>
+                            <tr  onclick="document.location = 'details.html';" style="cursor: pointer">
+                            <td><input type="checkbox"></label></td>
+                            <td><span class="glyphicon glyphicon-paperclip"></span></td>
+                            <td><span class="name" style="min-width: 120px; display: inline-block;">Christopher Maven</span></td>
+                            <td><span class="">Page not responding</span></td>
+                            <td><span class="text-muted" style="font-size: 11px;">-Tabs not working</span></td>
+                            <td><span class="pull-right"></span></td>
+                            <td><span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-danger">High</span></span></td>
+                            <td><span class="text-muted pull-right" style="font-size: 11px;">10:10 AM</span> </td>
+                            </tr>
+                            <tr  onclick="document.location = 'details.html';" style="cursor: pointer">
+                            <td><input type="checkbox"></label></td>
+                            <td><span class="glyphicon glyphicon-paperclip"></span></td>
+                            <td><span class="name" style="min-width: 120px; display: inline-block;">Lila Swan</span></td>
+                            <td><span class="">Renew license</span></td>
+                            <td><span class="text-muted" style="font-size: 11px;">-Forgot id</span></td>
+                            <td><span class="pull-right"></span></td>
+                            <td><span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-primary">Low</span></span></td>
+                            <td><span class="text-muted pull-right" style="font-size: 11px;">02:10 PM</span></td> 
+                            </tr>
+                            <tr  onclick="document.location = 'details.html';" style="cursor: pointer">
+                            <td><input type="checkbox"></label></td>
+                            <td><span class="glyphicon glyphicon-paperclip"></span></td>
+                            <td><span class="name" style="min-width: 120px; display: inline-block;">Greg Noak</span></td>
+                            <td><span class="">Undefined error</span></td>
+                            <td><span class="text-muted" style="font-size: 11px;">-pop up message showing error</span></td>
+                            <td><span class="pull-right"></span></td>
+                            <td><span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-warning">Medium</span></span></td>
+                            <td><span class="text-muted pull-right" style="font-size: 11px;">05:10 PM</span></td> 
+                            </tr>
+                            <tr  onclick="document.location = 'details.html';" style="cursor: pointer">
+                            <td><input type="checkbox"/></td>
+                            <td><span class="glyphicon glyphicon-paperclip"></span></td>
+                            <td><span class="name" style="min-width: 120px; display: inline-block;">John Doe</span></td>
+                            <td><span class="">System crashed</span></td>
+                            <td><span class="text-muted" style="font-size: 11px;">-System stopped working when submit order.</span></td>
+                            <td><span class="pull-right"></span></td>
+                            <td><span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-danger">High</span></span></td>
+                            <td><span class="text-muted pull-right" style="font-size: 11px;">12:10 AM</span></td> 
+                            </tr>
+                            </table>
                         </div>
                     </div>
                     <div class="tab-pane fade in" id="awaiting">
