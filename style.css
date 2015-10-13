@@ -558,11 +558,13 @@ ul.notification li {
     padding: 5px 0;
 }
 
-.ct-chart {
+.ct-chart-line,
+.ct-chart-pie {
   margin: 30px 0 30px;
   height: 150px;
 }
 
-.ct-chart .ct-label {
+.ct-chart-line .ct-label,
+.ct-chart-pie .ct-label {
     font-size: 12px;
 }

@@ -58,16 +58,19 @@
                     <div class="col-xs-12 col-sm-12 col-md-8">
                         <div class="stdpad">
                             <div class="table-head">Ticket Stats</div>
+                            <div id="#line" class="ct-chart-line">
+
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-xs-12 col-sm-12 col-md-4">
                         <div class="stdpad">
                             <div class="table-head">Overal Satisfaction</div>
-                            <div class="ct-chart">
+                            <div id="#pie" class="ct-chart-pie">
 
                             </div>
- 
+
                         </div>
                     </div>
                 </div>
@@ -86,16 +89,36 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
     <script src="bower_components/chartist/dist/chartist.min.js"></script>
-	<script type="text/javascript">
-
-new Chartist.Pie('.ct-chart', {
-  series: [20, 10, 30, 40]
-}, {
+    <script type="text/javascript">
+        new Chartist.Pie('.ct-chart-pie', {
+            series: [20, 10, 30, 40]
+        }, {
             donut: true,
             donutWidth: 40,
             startAngle: 0,
             total: 100,
             showLabel: true,
+        });
+
+new Chartist.Line('.ct-chart-line', {
+  labels: [1, 2, 3, 4, 5, 6, 7, 8],
+  series: [
+    [1, 2, 3, 1, -2, 0, 1, 0],
+    [-2, -1, -2, -1, -2.5, -1, -2, -1],
+    [0, 0, 0, 1, 2, 2.5, 2, 1],
+    [2.5, 2, 1, 0.5, 1, 0.5, -1, -2.5]
+  ]
+}, {
+  high: 3,
+  low: -3,
+  showArea: true,
+  showLine: false,
+  showPoint: false,
+  fullWidth: true,
+  axisX: {
+    showLabel: false,
+    showGrid: false
+  }
 });
     </script>
 </body>
