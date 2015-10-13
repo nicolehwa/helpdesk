@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar">
+                <ul class="nav nav-sidebar">
+                    <li><a href="ticket.html">Overview</a></li>
+                    <li><a href="ManageTicket.html">Manage Tickets <span class="badge pull-right">5</span> </a>
+                    <li><a href="#">Report</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" style="background: #fff; min-height: 60px; margin-bottom: 15px;">
+            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+                <div class="topbar">
+                    <span class="glyphicon glyphicon-inbox"></span>
+                    <span class="glyphicon glyphicon-cog"></span>
+                    <span class="glyphicon glyphicon-off"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-2 main">
+                <!-- Page header -->
+                <div class="page-header">
+                    <h2>New Ticket</h2>
+                </div>
+                <!-- /Page header -->
+            </div>
+        </div>
+
+        <div class="row" style="padding-top: 25px; background: #fff">
+            <div class="col-md-7 col-md-offset-2 main">
+
+                <form>
+                  <div class="form-group">
+                    <label for="labels">Labels</label>
+                    <select class="form-control">
+                      <option>General Issues</option>
+                      <option>Special Request</option>
+                      <option>Database</option>
+                      <option>Others</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="labels">Priority level</label>
+                    <select class="form-control">
+                      <option>Low</option>
+                      <option>Medium</option>
+                      <option>High</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleSubject">Subject</label>
+                    <input type="text" class="form-control" id="exampleSubject" placeholder="Subject">
+                  </div>
+                  <div class="form-group">
+                    <label for="description">Description </label>
+                    <textarea class="form-control" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputFile">Attachment/Screenshot </label>
+                    <input type="file" id="exampleInputFile">
+                    <p class="help-block">Example block-level help text here.</p>
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                    <div class="separator"></div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</body>
+
+</html>
