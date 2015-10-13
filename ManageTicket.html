@@ -56,8 +56,10 @@
     <!-- Nav tabs -->
             <div class="stdpad">
             <div class="table-head">All Tickets
-               <div class="pull-right col-md-4" style="padding-top: 10px; padding-botton: 10px;">
-                      <input type="text" class="form-control input-sm" placeholder="Search ticket..."> 
+               <div class="pull-right">
+                        <a href="NewTicket.html"><button type="button" class="btn btn-default btn-sm">
+                          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Ticket
+                        </button></a>
                 </div>
             </div>
 
@@ -87,7 +89,8 @@
                              <td>Database missing</td>
                              <td><span class="text-muted" style="font-size: 11px;">-Table not found </span></td>
                              <td><span class="pull-right"></span></td>
-                             <td><span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-primary">Low</span></span></td>
+                             <td><span class="priority-low">Low</span></td>
+                             <td><span class="label label-default">Database</span></td>
                              <td><span class="text-muted pull-right" style="font-size: 11px;">12:10 AM</span></td>
                             </tr>
                             <tr  onclick="document.location = 'details.html';" style="cursor: pointer">
@@ -97,7 +100,8 @@
                             <td><span class="">Page not responding</span></td>
                             <td><span class="text-muted" style="font-size: 11px;">-Tabs not working</span></td>
                             <td><span class="pull-right"></span></td>
-                            <td><span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-danger">High</span></span></td>
+                            <td><span class="priority-high">High</span></td>
+                            <td><span class="label label-default">General Issues</span></td>
                             <td><span class="text-muted pull-right" style="font-size: 11px;">10:10 AM</span> </td>
                             </tr>
                             <tr  onclick="document.location = 'details.html';" style="cursor: pointer">
@@ -107,7 +111,8 @@
                             <td><span class="">Renew license</span></td>
                             <td><span class="text-muted" style="font-size: 11px;">-Forgot id</span></td>
                             <td><span class="pull-right"></span></td>
-                            <td><span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-primary">Low</span></span></td>
+                            <td><span class="priority-low">Low</span></td>
+                            <td><span class="label label-default">License</span></td>
                             <td><span class="text-muted pull-right" style="font-size: 11px;">02:10 PM</span></td> 
                             </tr>
                             <tr  onclick="document.location = 'details.html';" style="cursor: pointer">
@@ -117,7 +122,8 @@
                             <td><span class="">Undefined error</span></td>
                             <td><span class="text-muted" style="font-size: 11px;">-pop up message showing error</span></td>
                             <td><span class="pull-right"></span></td>
-                            <td><span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-warning">Medium</span></span></td>
+                            <td><span class="priority-medium">Medium</span></td>
+                            <td><span class="label label-default">Others</span></td>
                             <td><span class="text-muted pull-right" style="font-size: 11px;">05:10 PM</span></td> 
                             </tr>
                             <tr  onclick="document.location = 'details.html';" style="cursor: pointer">
@@ -127,7 +133,8 @@
                             <td><span class="">System crashed</span></td>
                             <td><span class="text-muted" style="font-size: 11px;">-System stopped working when submit order.</span></td>
                             <td><span class="pull-right"></span></td>
-                            <td><span class="name" style="min-width: 120px; display: inline-block;"><span class="label label-danger">High</span></span></td>
+                            <td><span class="priority-high">High</span></td>
+                            <td><span class="label label-default">Special Request</span></td>
                             <td><span class="text-muted pull-right" style="font-size: 11px;">12:10 AM</span></td> 
                             </tr>
                             </table>

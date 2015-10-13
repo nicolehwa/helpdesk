@@ -149,6 +149,24 @@ hr {
     margin-top: 0;
 }
 
+.priority-low {
+    color: #337ab7;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.priority-medium{
+    color: #f0ad4e;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.priority-high{
+    color: #d9534f;
+    font-weight: bold;
+    font-size: 11px;
+}
+
 div.boxes-danger {
     color: #ffffff;
     padding: 20px;
@@ -178,7 +196,6 @@ div.boxes-success {
     padding: 20px;
     background-color: #5cb85c;
 }
-
 
 /*
  * Timeline
