@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
         <!-- Nav tabs -->
-        <div class="stdpad">
+        <div class="stdpad" style="height: auto !important">
             <div class="table-head">All Tickets
                 <div class="pull-right">
                     <a href="#/manage/new">
@@ -31,6 +31,20 @@
                 <div class="tab-pane fade in active" id="open">
                     <div class="table-responsive">
                         <table class="table table-hover">
+                            <tr>
+                        <th>
+                                    <input type="checkbox">
+                                    </label>
+                                </th>
+                                 <th></th>
+                                <th>Requester</th>
+                                <th>Subject</th>
+                                <th>Desciption</th>
+                                <th><span class="pull-right"></span></th>
+                                <th>Priority</th>
+                                <th>Label</th>
+                                <th><span class="pull-right">Timestamp</span></th>
+                    </tr>
                             <tr onclick="document.location = '#/manage/view';" style="cursor: pointer">
                                 <td>
                                     <input type="checkbox">
@@ -113,7 +127,7 @@
                 <div class="tab-pane fade in" id="inProgress">
                     ...</div>
                 <div class="tab-pane fade in" id="solved">
-                    <div class="list-group">
+                    <div class="list-group" >
                         <a href="#" class="list-group-item">
                             <input type="checkbox">
                             <span class="glyphicon glyphicon-star-empty"></span>

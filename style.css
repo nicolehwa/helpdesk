@@ -7,13 +7,18 @@ body {
     background: #eee;
 }
 
+
 .nav-tabs .glyphicon:not(.no-margin) {
     margin-right: 10px;
-
+    border-bottom-color: transparent;
 }
 
 .row-header-margin {
     margin-top: 20px;
+}
+
+.nav-tabs .tab-pane {
+    border-bottom-color: transparent;
 }
 .tab-pane .list-group-item:first-child {
     border-top-right-radius: 0px;
