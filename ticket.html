@@ -2,8 +2,8 @@
     <div class="col-md-10 col-md-offset-2 main">
         <!-- Page header -->
         <div class="page-header">
-            <h2>Migrate database</h2>
-            <p><span class="label label-warning">closed</span> <b>coolzilj</b> opened this issue 2 hours ago · 3 comments</p>
+            <h2>How do you clear the SQL Server transaction log?</h2>
+            <p><span class="label label-warning">closed</span> <b>coolzilj</b> opened this issue 11 hours ago · 3 comments</p>
         </div>
         <!-- /Page header -->
     </div>
@@ -30,14 +30,14 @@
 
                 <!-- Heading -->
                 <div class="panel-heading">
-                    <b>coolzilj</b> commented 2 hours ago
+                    <b>coolzilj</b> commented 11 hours ago
                     <button type="button" class="btn btn-default btn-xs pull-right">Owner</button>
                 </div>
                 <!-- /Heading -->
 
                 <!-- Body -->
                 <div class="panel-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nibh at elit accumsan blandit vel vitae sapien. Ut porttitor sem sem, non pharetra diam mollis non. Nunc consectetur velit et sollicitudin fringilla. Phasellus mauris justo, vehicula vel vehicula a, feugiat non sem. Donec vitae tristique nibh. Nulla pulvinar, nunc ac vulputate pulvinar, mi odio laoreet ex, in suscipit metus tellus eget felis. Phasellus fermentum placerat risus in suscipit. Mauris nulla ipsum, feugiat a molestie vel, tincidunt sed magna. Maecenas sed posuere massa. Suspendisse potenti. Quisque mollis sodales lacus luctus posuere.
+                    I'm not a SQL expert, and I'm reminded of the fact every time I need to do something beyond the basics. I have a test database that is not large in size, but the transaction log definitely is. How do I clear out the transaction log?
                 </div>
                 <!-- /Body -->
 
@@ -55,13 +55,25 @@
 
                 <!-- Heading -->
                 <div class="panel-heading">
-                    <b>admin</b> commented 11 hours ago
+                    <b>admin</b> commented 5 hours ago
                 </div>
                 <!-- /Heading -->
 
                 <!-- Body -->
                 <div class="panel-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nibh at elit accumsan blandit vel vitae sapien. Ut porttitor sem sem, non pharetra diam mollis non. Nunc consectetur velit et sollicitudin fringilla. Phasellus mauris justo, vehicula vel vehicula a, feugiat non sem. Donec vitae tristique nibh. Nulla pulvinar, nunc ac vulputate pulvinar, mi odio laoreet ex, in suscipit metus tellus eget felis. Phasellus fermentum placerat risus in suscipit. Mauris nulla ipsum, feugiat a molestie vel, tincidunt sed magna. Maecenas sed posuere massa. Suspendisse potenti. Quisque mollis sodales lacus luctus posuere.
+                    Making a log file smaller should really be reserved for scenarios where it encountered unexpected growth which you do not expect to happen again. If the log file will grow to the same size again, not very much is accomplished by shrinking it temporarily. Now, depending on the recovery goals of your database, these are the actions you should take.
+
+                    First, take a full backup
+
+                    Never make any changes to your database without ensuring you can restore it should something go wrong.
+
+                    If you care about point-in-time recovery
+
+                    (And by point-in-time recovery, I mean you care about being able to restore to anything other than a full or differential backup.)
+
+                    Presumably your database is in FULL recovery mode. If not, then make sure it is:
+                   <br>
+                   <code>ALTER DATABASE testdb SET RECOVERY FULL;</code>
                 </div>
                 <!-- /Body -->
 
@@ -94,7 +106,7 @@
 
                 <!-- Heading -->
                 <div class="panel-heading">
-                    <b>admin</b> commented 11 hours ago
+                    <b>admin</b> commented 5 hours ago
                     <span class="pull-right">
                                 <i class="glyphicon glyphicon-ok"></i> Marked as answer
                             </span>
@@ -103,7 +115,12 @@
 
                 <!-- Body -->
                 <div class="panel-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non nibh at elit accumsan blandit vel vitae sapien. Ut porttitor sem sem, non pharetra diam mollis non. Nunc consectetur velit et sollicitudin fringilla. Phasellus mauris justo, vehicula vel vehicula a, feugiat non sem. Donec vitae tristique nibh. Nulla pulvinar, nunc ac vulputate pulvinar, mi odio laoreet ex, in suscipit metus tellus eget felis. Phasellus fermentum placerat risus in suscipit. Mauris nulla ipsum, feugiat a molestie vel, tincidunt sed magna. Maecenas sed posuere massa. Suspendisse potenti. Quisque mollis sodales lacus luctus posuere.
+                   Even if you are taking regular full backups, the log file will grow and grow until you perform a log backup - this is for your protection, not to needlessly eat away at your disk space. You should be performing these log backups quite frequently, according to your recovery objectives. For example, if you have a business rule that states you can afford to lose no more than 15 minutes of data in the event of a disaster, you should have a job that backs up the log every 15 minutes. Here is a script that will generate timestamped file names based on the current time (but you can also do this with maintenance plans etc., just don't choose any of the shrink options in maintenance plans, they're awful).<br>
+                   <code>
+                   DECLARE @path NVARCHAR(255) = N'\\backup_share\log\testdb_' 
+                  + CONVERT(CHAR(8), GETDATE(), 112) + '_'
+                  + REPLACE(CONVERT(CHAR(8), GETDATE() , 108),':','')+ '.trn';
+                  BACKUP LOG foo TO DISK = @path WITH INIT, COMPRESSION;</code>
                 </div>
                 <!-- /Body -->
 
