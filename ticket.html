@@ -116,11 +116,11 @@
                 <!-- Body -->
                 <div class="panel-body">
                    Even if you are taking regular full backups, the log file will grow and grow until you perform a log backup - this is for your protection, not to needlessly eat away at your disk space. You should be performing these log backups quite frequently, according to your recovery objectives. For example, if you have a business rule that states you can afford to lose no more than 15 minutes of data in the event of a disaster, you should have a job that backs up the log every 15 minutes. Here is a script that will generate timestamped file names based on the current time (but you can also do this with maintenance plans etc., just don't choose any of the shrink options in maintenance plans, they're awful).<br>
-                   <code>
+                   <p><code>
                    DECLARE @path NVARCHAR(255) = N'\\backup_share\log\testdb_' 
                   + CONVERT(CHAR(8), GETDATE(), 112) + '_'
                   + REPLACE(CONVERT(CHAR(8), GETDATE() , 108),':','')+ '.trn';
-                  BACKUP LOG foo TO DISK = @path WITH INIT, COMPRESSION;</code>
+                  BACKUP LOG foo TO DISK = @path WITH INIT, COMPRESSION;</code></p>
                 </div>
                 <!-- /Body -->
 
