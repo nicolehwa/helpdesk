@@ -1,0 +1,27 @@
+{
+  "name": "AwesomeDesk",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nicolehwa/helpdesk",
+  "authors": [
+    "LaxxerS <laxxers@gmail.com>",
+    "nicolehwa <ms.ah.hwa@gmail.com>"
+  ],
+  "description": "An awesome helpdesk - AwesomeDesk",
+  "keywords": [
+    "helpdesk",
+    "awesome"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "chartist": "~0.9.4",
+    "angular-route": "~1.4.7"
+  }
+}

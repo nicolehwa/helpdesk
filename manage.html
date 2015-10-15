@@ -1,0 +1,134 @@
+<div class="row">
+    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+        <!-- Nav tabs -->
+        <div class="stdpad">
+            <div class="table-head">All Tickets
+                <div class="pull-right">
+                    <a href="/#/manage/new">
+                        <button type="button" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New Ticket
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row row-header-margin"></div>
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#open" data-toggle="tab"><span class="glyphicon glyphicon-inbox">
+                </span>Open</a></li>
+                <li><a href="#awaiting" data-toggle="tab"><span class="glyphicon glyphicon-user"></span>
+                    Awaiting Reply</a></li>
+                <li><a href="#inProgress" data-toggle="tab"><span class="glyphicon glyphicon-tags"></span>
+                    In Progress</a></li>
+                <li><a href="#solved" data-toggle="tab"><span class="glyphicon glyphicon-cloud"></span>
+                    Solved</a></li>
+                <li><a href="#settings" data-toggle="tab"><span class="glyphicon glyphicon-plus no-margin">
+                </span></a></li>
+
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="open">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <tr onclick="document.location = '/#/manage/view';" style="cursor: pointer">
+                                <td>
+                                    <input type="checkbox">
+                                    </label>
+                                </td>
+                                <td><span class="glyphicon glyphicon-paperclip"></span></td>
+                                <td><span class="name" style="min-width: 120px; display: inline-block;">Jerrard Lee</span></td>
+                                <td>Database missing</td>
+                                <td><span class="text-muted" style="font-size: 11px;">-Table not found </span></td>
+                                <td><span class="pull-right"></span></td>
+                                <td><span class="priority-low">Low</span></td>
+                                <td><span class="label label-default">Database</span></td>
+                                <td><span class="text-muted pull-right" style="font-size: 11px;">12:10 AM</span></td>
+                            </tr>
+                            <tr onclick="document.location = 'details.html';" style="cursor: pointer">
+                                <td>
+                                    <input type="checkbox">
+                                    </label>
+                                </td>
+                                <td><span class="glyphicon glyphicon-paperclip"></span></td>
+                                <td><span class="name" style="min-width: 120px; display: inline-block;">Christopher Maven</span></td>
+                                <td><span class="">Page not responding</span></td>
+                                <td><span class="text-muted" style="font-size: 11px;">-Tabs not working</span></td>
+                                <td><span class="pull-right"></span></td>
+                                <td><span class="priority-high">High</span></td>
+                                <td><span class="label label-default">General Issues</span></td>
+                                <td><span class="text-muted pull-right" style="font-size: 11px;">10:10 AM</span> </td>
+                            </tr>
+                            <tr onclick="document.location = 'details.html';" style="cursor: pointer">
+                                <td>
+                                    <input type="checkbox">
+                                    </label>
+                                </td>
+                                <td><span class="glyphicon glyphicon-paperclip"></span></td>
+                                <td><span class="name" style="min-width: 120px; display: inline-block;">Lila Swan</span></td>
+                                <td><span class="">Renew license</span></td>
+                                <td><span class="text-muted" style="font-size: 11px;">-Forgot id</span></td>
+                                <td><span class="pull-right"></span></td>
+                                <td><span class="priority-low">Low</span></td>
+                                <td><span class="label label-default">License</span></td>
+                                <td><span class="text-muted pull-right" style="font-size: 11px;">02:10 PM</span></td>
+                            </tr>
+                            <tr onclick="document.location = 'details.html';" style="cursor: pointer">
+                                <td>
+                                    <input type="checkbox">
+                                    </label>
+                                </td>
+                                <td><span class="glyphicon glyphicon-paperclip"></span></td>
+                                <td><span class="name" style="min-width: 120px; display: inline-block;">Greg Noak</span></td>
+                                <td><span class="">Undefined error</span></td>
+                                <td><span class="text-muted" style="font-size: 11px;">-pop up message showing error</span></td>
+                                <td><span class="pull-right"></span></td>
+                                <td><span class="priority-medium">Medium</span></td>
+                                <td><span class="label label-default">Others</span></td>
+                                <td><span class="text-muted pull-right" style="font-size: 11px;">05:10 PM</span></td>
+                            </tr>
+                            <tr onclick="document.location = 'details.html';" style="cursor: pointer">
+                                <td>
+                                    <input type="checkbox" />
+                                </td>
+                                <td><span class="glyphicon glyphicon-paperclip"></span></td>
+                                <td><span class="name" style="min-width: 120px; display: inline-block;">John Doe</span></td>
+                                <td><span class="">System crashed</span></td>
+                                <td><span class="text-muted" style="font-size: 11px;">-System stopped working when submit order.</span></td>
+                                <td><span class="pull-right"></span></td>
+                                <td><span class="priority-high">High</span></td>
+                                <td><span class="label label-default">Special Request</span></td>
+                                <td><span class="text-muted pull-right" style="font-size: 11px;">12:10 AM</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade in" id="awaiting">
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <span class="text-center">This tab is empty.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade in" id="inProgress">
+                    ...</div>
+                <div class="tab-pane fade in" id="solved">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">
+                            <input type="checkbox">
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            <span class="name" style="min-width: 120px; display: inline-block;">Bhaumik Patel</span>
+                            <span class="">This is big title</span>
+                            <span class="text-muted" style="font-size: 11px;">- Hi hello how r u ?</span>
+                            <span class="badge">12:10 AM</span>
+                            <span class="pull-right"><span class="glyphicon glyphicon-paperclip"></span></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="tab-pane fade in" id="settings">
+                    This tab is empty.</div>
+            </div>
+
+        </div>
+    </div>
+</div>
