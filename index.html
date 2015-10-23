@@ -25,27 +25,20 @@
 </head>
 
 <body ng-app="AwesomeDesk">
+<nav class="navbar navbar-inverse" style="border-radius: 0;">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/issueboard"><span class="glyphicon glyphicon-leaf" style="padding-right:5px"></span>Pronto HelpDesk</a>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-cog"></span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-off"></span></a></li>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar">
-                <ul class="nav nav-sidebar" ng-controller="main">
-                    <li ng-class="{ active: isActive('/dashboard')}"><a href="#/dashboard" class="active">Dashboard</a></li>
-                    <li ng-class="{ active: isActive('/manage')}"><a href="#/manage">Manage Tickets</a></li>
-                    <li ng-class="{ active: isActive('/report')}"><a href="#/report">Report</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row" style="background: #fff; min-height: 60px; margin-bottom: 15px;">
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
-                <div class="topbar">
-                    <span class="glyphicon glyphicon-inbox"></span>
-                    <span class="glyphicon glyphicon-cog"></span>
-                    <span class="glyphicon glyphicon-off"></span>
-                </div>
-            </div>
-        </div>
+      </ul>
+  </div><!-- /.container-fluid -->
+</nav>
+    <div class="container">
         <div ng-view></div>
     </div>
     <!-- Bootstrap core JavaScript

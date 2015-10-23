@@ -7,6 +7,14 @@ body {
     background: #eee;
 }
 
+.btn {
+    border-radius: 0;
+    border: none;
+}
+
+.btn-primary {
+    background: #11A7DB;
+}
 
 .nav-tabs .glyphicon:not(.no-margin) {
     margin-right: 10px;
@@ -14,7 +22,7 @@ body {
 }
 
 .row-header-margin {
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .nav-tabs .tab-pane {
@@ -134,7 +142,7 @@ hr {
 .nav-sidebar > .active > a:hover,
 .nav-sidebar > .active > a:focus {
     color: #fff;
-    border-left: 3px solid #428bca;
+    border-left: 3px solid #11A7DB;
     background: #333;
 }
 
@@ -542,9 +550,19 @@ div.boxes-success {
     font-size: 14px;
     font-weight: lighter;
     letter-spacing: 1px;
-    border-bottom: 2px solid #337ab7;
+    /*border-bottom: 2px solid #337ab7;*/
     /* text-transform:uppercase; */
     /* border-bottom:1px solid #E5E9EC;*/
+}
+
+.table-head.red{
+    background-color: #ed5564;
+    color: #fff;
+}
+
+.table-head.blue{
+    background-color: #11A7DB;
+    color: #fff;
 }
 
 ul.notification {

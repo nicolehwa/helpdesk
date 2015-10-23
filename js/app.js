@@ -7,6 +7,10 @@ angular.module('AwesomeDesk', ['ngRoute'])
                 templateUrl: 'dashboard.html'
             })
 
+            .when('/issueboard', {
+                templateUrl: 'issueboard.html'
+            })
+
             .when('/manage', {
                 templateUrl: 'manage.html'
             })
@@ -21,7 +25,7 @@ angular.module('AwesomeDesk', ['ngRoute'])
                 templateUrl: 'report.html'
             })
             .otherwise({
-                redirectTo: '/dashboard'
+                redirectTo: '/issueboard'
             });
     })
 
