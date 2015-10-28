@@ -3,6 +3,10 @@ angular.module('AwesomeDesk', ['ngRoute'])
         'use strict';
 
         $routeProvider
+            .when('/login', {
+                templateUrl: 'login.html'
+            })
+
             .when('/dashboard', {
                 templateUrl: 'dashboard.html'
             })

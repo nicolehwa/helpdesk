@@ -408,6 +408,11 @@ div.boxes-success {
 
 /********************************************************************/
 
+.small-pad {
+    max-width: 500px;
+    margin: auto;
+}
+
 .stdpad {
     width: 100%;
     height: 300px;
